@@ -11,7 +11,6 @@ contract Mapping {
     constructor() {
         mp[0xAA] = address(0xBeef);
         mp1[0xBB] = address(0xC0FFEE);
-
     }
 
     function readStorageAt(uint256 _slot) external view returns (bytes32 result) {
@@ -36,6 +35,5 @@ contract RunMapping is Script {
         console.logBytes32(_mapping.readMappingStorageAt(0, 0xAA));
 
         console.logBytes32(_mapping.readMappingStorageAt(1, 0xBB));
-
     }
 }

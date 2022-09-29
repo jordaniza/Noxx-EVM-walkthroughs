@@ -62,17 +62,14 @@ contract RunArr is Script {
 
         console.logBytes32(arr.getStorageAt(2));
 
-
         // storage spread over 2 slots
         console.logBytes32(arr.getStorageAt(3));
         console.logBytes32(arr.getStorageAt(4));
-
 
         // length should increase from 3 to 4
         console.logBytes32(arr.getStorageAt(5));
         arr.pushToArr5();
         console.logBytes32(arr.getStorageAt(5));
-
 
         console.logBytes32(arr.getDynamicStorageAt(1, 0));
 
